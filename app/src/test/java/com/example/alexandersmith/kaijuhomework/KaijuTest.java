@@ -87,6 +87,12 @@ public class KaijuTest {
     }
 
     @Test
+    public void testKaijuCanAttackAPC(){
+        assertEquals("Smash with fists", ape.attack(APC));
+        assertEquals(0, APC.getHealthValue());
+    }
+
+    @Test
     public void testKaijudies(){
         assertEquals("It was beauty killed the beast", ape.damage(100));
     }
@@ -100,6 +106,12 @@ public class KaijuTest {
     public void testAttackPicker(){
        tank.pickAttack("Strong", lizard);
         assertEquals(80, lizard.getHealthValue());
+    }
+
+    @Test
+    public void testWeakAttackPicker(){
+        tank.pickAttack("Weak", lizard);
+        assertEquals(90, lizard.getHealthValue());
     }
 
 }

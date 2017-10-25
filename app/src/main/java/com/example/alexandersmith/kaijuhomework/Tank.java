@@ -23,9 +23,9 @@ public class Tank extends Vehicle {
     public void pickAttack(String type, Kaiju kaiju) {
         if (type == "Strong") {
             strongAttack(kaiju);
-        if (type == "Weak"){
+        } else if (type == "Weak"){
             weakAttack(kaiju);
         }
         }
-    }
+
 }
